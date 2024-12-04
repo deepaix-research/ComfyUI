@@ -1,7 +1,5 @@
 __pycache__/
 *.py[cod]
-/output/
-/input/
 !/input/example.png
 /models/
 /temp/
@@ -17,7 +15,6 @@ venv/
 !/web/extensions/logging.js.example
 !/web/extensions/core/
 /tests-ui/data/object_info.json
-/user/
 *.log
 web_custom_versions/
 .DS_Store
