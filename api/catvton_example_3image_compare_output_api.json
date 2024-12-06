@@ -1,0 +1,253 @@
+{
+  "1": {
+    "inputs": {
+      "mask_grow": 25,
+      "mixed_precision": "fp16",
+      "seed": 88957249015783,
+      "steps": 50,
+      "cfg": 3,
+      "image": [
+        "2",
+        0
+      ],
+      "mask": [
+        "13",
+        1
+      ],
+      "refer_image": [
+        "7",
+        0
+      ]
+    },
+    "class_type": "CatVTONWrapper",
+    "_meta": {
+      "title": "CatVTON Wrapper"
+    }
+  },
+  "2": {
+    "inputs": {
+      "image": "x6.png",
+      "upload": "image"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Load Image(fashion model)"
+    }
+  },
+  "7": {
+    "inputs": {
+      "image": "6.png",
+      "upload": "image"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Load Image(cloth)"
+    }
+  },
+  "8": {
+    "inputs": {
+      "images": [
+        "1",
+        0
+      ]
+    },
+    "class_type": "PreviewImage",
+    "_meta": {
+      "title": "Preview Image"
+    }
+  },
+  "11": {
+    "inputs": {
+      "mask": [
+        "13",
+        1
+      ]
+    },
+    "class_type": "LayerMask: MaskPreview",
+    "_meta": {
+      "title": "LayerMask: MaskPreview"
+    }
+  },
+  "13": {
+    "inputs": {
+      "face": false,
+      "hair": false,
+      "glasses": false,
+      "top_clothes": false,
+      "bottom_clothes": true,
+      "torso_skin": false,
+      "left_arm": false,
+      "right_arm": false,
+      "left_leg": false,
+      "right_leg": false,
+      "left_foot": false,
+      "right_foot": false,
+      "detail_method": "VITMatte",
+      "detail_erode": 8,
+      "detail_dilate": 6,
+      "black_point": 0.01,
+      "white_point": 0.99,
+      "process_detail": true,
+      "device": "cuda",
+      "max_megapixels": 2,
+      "image": [
+        "2",
+        0
+      ]
+    },
+    "class_type": "LayerMask: HumanPartsUltra",
+    "_meta": {
+      "title": "LayerMask: Human Parts Ultra"
+    }
+  },
+  "38": {
+    "inputs": {
+      "border_thickness": 0,
+      "border_color": "custom",
+      "outline_thickness": 0,
+      "outline_color": "white",
+      "max_columns": 5,
+      "border_color_hex": "#000000",
+      "images": [
+        "40",
+        0
+      ]
+    },
+    "class_type": "CR Image Grid Panel",
+    "_meta": {
+      "title": "🌁 CR Image Grid Panel"
+    }
+  },
+  "40": {
+    "inputs": {
+      "image1": [
+        "42",
+        0
+      ],
+      "image2": [
+        "44",
+        0
+      ],
+      "image3": [
+        "45",
+        0
+      ]
+    },
+    "class_type": "ImpactMakeImageBatch",
+    "_meta": {
+      "title": "Make Image Batch"
+    }
+  },
+  "41": {
+    "inputs": {
+      "images": [
+        "38",
+        0
+      ]
+    },
+    "class_type": "PreviewImage",
+    "_meta": {
+      "title": "Preview Image"
+    }
+  },
+  "42": {
+    "inputs": {
+      "layout_options": "footer",
+      "header_height": 0,
+      "header_text": "text123",
+      "header_align": "center",
+      "footer_height": 150,
+      "footer_text": "input",
+      "footer_align": "center",
+      "font_name": "AlumniSansCollegiateOne-Regular.ttf",
+      "font_color": "custom",
+      "header_font_size": 250,
+      "footer_font_size": 100,
+      "border_thickness": 0,
+      "border_color": "white",
+      "background_color": "custom",
+      "font_color_hex": "#000000",
+      "border_color_hex": "#000000",
+      "bg_color_hex": "#FFFFFF",
+      "image_panel": [
+        "7",
+        0
+      ]
+    },
+    "class_type": "CR Page Layout",
+    "_meta": {
+      "title": "🌁 CR Page Layout"
+    }
+  },
+  "44": {
+    "inputs": {
+      "layout_options": "footer",
+      "header_height": 0,
+      "header_text": "text123",
+      "header_align": "center",
+      "footer_height": 150,
+      "footer_text": "input",
+      "footer_align": "center",
+      "font_name": "AlumniSansCollegiateOne-Regular.ttf",
+      "font_color": "custom",
+      "header_font_size": 250,
+      "footer_font_size": 100,
+      "border_thickness": 0,
+      "border_color": "white",
+      "background_color": "custom",
+      "font_color_hex": "#000000",
+      "border_color_hex": "#000000",
+      "bg_color_hex": "#FFFFFF",
+      "image_panel": [
+        "2",
+        0
+      ]
+    },
+    "class_type": "CR Page Layout",
+    "_meta": {
+      "title": "🌁 CR Page Layout"
+    }
+  },
+  "45": {
+    "inputs": {
+      "layout_options": "footer",
+      "header_height": 0,
+      "header_text": "text123",
+      "header_align": "center",
+      "footer_height": 150,
+      "footer_text": "output",
+      "footer_align": "center",
+      "font_name": "AlumniSansCollegiateOne-Regular.ttf",
+      "font_color": "custom",
+      "header_font_size": 250,
+      "footer_font_size": 100,
+      "border_thickness": 0,
+      "border_color": "white",
+      "background_color": "custom",
+      "font_color_hex": "#000000",
+      "border_color_hex": "#000000",
+      "bg_color_hex": "#FFFFFF",
+      "image_panel": [
+        "1",
+        0
+      ]
+    },
+    "class_type": "CR Page Layout",
+    "_meta": {
+      "title": "🌁 CR Page Layout"
+    }
+  },
+  "46": {
+    "inputs": {
+      "filename_prefix": "ComfyUI",
+      "images": [
+        "38",
+        0
+      ]
+    },
+    "class_type": "SaveImage",
+    "_meta": {
+      "title": "Save Image"
+    }
+  }
+}
